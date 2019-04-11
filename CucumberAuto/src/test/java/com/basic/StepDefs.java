@@ -44,20 +44,23 @@ public class StepDefs {
 	@Given ("^User needs to be on the homepage$")
 	public void user_needs_to_be_on_the_homepage(){
 	
-		driver.get("https://www.geographicsolutions.com/");
+		
 	     // maximized the browser window
 	       driver.manage().window().maximize();
 	       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	       System.out.println("homepage launch");
+	       driver.get("https://www.geographicsolutions.com/");
 		
 	}
 
 	@Given ("^User needs to be on the homepage \"([^\"]*)\"$")
 	public void user_needs_to_be_on_the_homepage_xxx(String url){
 
-		driver.get(url);
+		
 	     // maximized the browser window
 	       driver.manage().window().maximize();
 	       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	       driver.get(url);
 		
 	}
 	

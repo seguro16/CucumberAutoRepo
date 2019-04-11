@@ -30,10 +30,9 @@ public class SharedStepDefs {
 	@Given ("^User needs to be on the homepage2 \"([^\"]*)\"$")
 	public void user_needs_to_be_on_the_homepage2_xxx(String url){
 
-		driver.get(url);
-	     // maximized the browser window
-	    
+		  
 	       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	       driver.get(url);
 		
 	}
 	
